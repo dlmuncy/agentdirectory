@@ -159,27 +159,27 @@ export default function BrowsePage() {
     selectedDifficulties.length + (selectedPrice ? 1 : 0);
   
   return (
-    <div className=\"container mx-auto px-4 py-8\">
-      <div className=\"mb-8\">
-        <h1 className=\"text-4xl font-bold mb-4\">Browse AI Agents</h1>
-        <p className=\"text-muted-foreground\">
+    <div className="container mx-auto px-4 py-8">
+      <div className="mb-8">
+        <h1 className="text-4xl font-bold mb-4">Browse AI Agents</h1>
+        <p className="text-muted-foreground">
           Discover and compare {pagination.total} verified AI solutions
         </p>
       </div>
       
       {/* Search Bar */}
-      <div className=\"mb-6\">
-        <div className=\"relative\">
-          <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5\" />
+      <div className="mb-6">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
           <Input
-            type=\"text\"
-            placeholder=\"Search agents...\"
+            type="text"
+            placeholder="Search agents..."
             value={searchQuery}
             onChange={(e) => {
               setSearchQuery(e.target.value);
               setPagination(prev => ({ ...prev, page: 1 }));
             }}
-            className=\"pl-10\"
+            className="pl-10"
           />
         </div>
       </div>
